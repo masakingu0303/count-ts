@@ -1,34 +1,22 @@
-import { useReducer } from 'react'
+import { useState } from 'react'
 import './App.css'
+import Count from './count/count'
+import Todo from './todo/Todo'
 
-type Action = | {type: 'plus'} | {type: 'minus'} | {type: 'reset'}
+const App = () => {
 
-const numChenge = (state: number, action: Action) => {
-  switch (action.type) {
-    case 'plus':
-      return state + 1;
-    case 'minus':
-      return state - 1;
-    case 'reset':
-      return 0;
-    default:
-      return state
-      break;
-  }
-}
-
-function App() {
-
-  const [count, dispatch] = useReducer(numChenge, 0);
+  const [ value, setValue] = useState('count')
+  console.log(value);
+  
 
   return (
     <>
-      <p>{count}</p>
-      <div className='containar'>
-        <button onClick={() => dispatch({ type: 'plus' })}>+</button>
-        <button onClick={() => dispatch({ type: 'minus' })}>-</button>
-        <button onClick={() => dispatch({ type: 'reset' })}>r</button>
-      </div>
+    <select value={value} onChange={(e) => setValue(e.target.value)}>
+      <option value="count">Count</option>
+      <option value="todo">Todo</option>
+    </select>
+    {value === 'count' && <Count/>}
+    {value === 'todo' && <Todo/>}
     </>
   )
 }
