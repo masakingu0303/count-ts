@@ -1,0 +1,27 @@
+#root {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.containar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-left: 1rem;
+  width: 60px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+button:first-of-type {
+  color: red;
+}
+button:nth-of-type(2){
+  color: blue;
+}
+button:nth-of-type(3){
+  color: gray;
+}
