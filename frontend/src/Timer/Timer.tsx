@@ -45,7 +45,7 @@ const formatTime = (totalSeconds: number) => {
     return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`
 }
 
-const Counter = () => {
+const Timer = () => {
 
 
     const [state, dispatch] = useReducer(reducer, initialState);
@@ -72,7 +72,7 @@ const Counter = () => {
 
     return (
         <>
-            <h2>Counter</h2>
+            <h2>Timer</h2>
             <div className="counter-box">
                 <time>{formatTime(state.count)}</time>
             </div>
@@ -85,4 +85,4 @@ const Counter = () => {
     )
 }
 
-export default Counter;
+export default Timer;

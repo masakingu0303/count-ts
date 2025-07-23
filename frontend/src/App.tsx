@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Count from './count/count'
 import Todo from './todo/Todo'
-import Counter from './Counter/Counter'
+import Timer from './Timer/Timer'
 
 const App = () => {
 
@@ -18,7 +18,7 @@ const App = () => {
       </select>
       {value === 'count' && <Count />}
       {value === 'todo' && <Todo />}
-      {value === 'counter' && <Counter />}
+      {value === 'counter' && <Timer/>}
     </>
   )
 }
