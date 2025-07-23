@@ -82,3 +82,48 @@
   font-size: 12px;
   cursor: pointer;
 }
+
+/* question */
+
+.question-containar {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.question-containar label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+
+.question-containar input,
+.question-containar textarea {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+
+
+.question-containar button {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+
+.question-row {
+  display: flex;
+}
+
+.question-radio {
+  display: flex;
+  gap: 2rem;
+  margin-left: 40px;
+}
+
