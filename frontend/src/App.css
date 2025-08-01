@@ -128,6 +128,11 @@
 }
 
 /* chat */
+
+.chat-containar {
+  position: relative;
+}
+
 .chat-form-containar {
   display: flex;
   flex-direction: column;
@@ -161,5 +166,14 @@
 }
 
 
+mark {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* search */
+.search-input {
+  margin-top: 1rem;
+}
 
 
